@@ -133,6 +133,21 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
+# import os
+# STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
 import os
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
+
+# ... other settings ...
+
+# The directory where your project's static files are located
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# The root directory where the collectstatic command will copy the static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
+
+# The URL prefix for serving static files (this should match your web server configuration)
+STATIC_URL = '/static/'
+
+
